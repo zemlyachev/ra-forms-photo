@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.shadow {
+  box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0;
+  padding: 5%;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.select-container {
+  width: 90%;
+  min-height: 6rem;
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.select-label {
+  pointer-events: none;
+  width: 100%;
+  min-height: 100%;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 1rem;
+  opacity: 1;
+  z-index: 1;
+}
+
+.select-input {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.photo-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.photo-card-container {
+  width: 11rem;
+  height: 11rem;
+  margin: 1rem;
+  position: relative;
+}
+
+.photo-card {
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  overflow: hidden;
+}
+
+img.card {
+  min-width: 100%;
+  height: 100%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.remove-btn {
+  position: absolute;
+  top: -1rem;
+  right: -0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+.remove-btn:hover {
+  background-color: rgb(255, 160, 160);
 }
